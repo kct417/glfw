@@ -2,6 +2,11 @@ cmake_minimum_required(VERSION 3.4...3.28 FATAL_ERROR)
 
 project(GLFW VERSION 3.5.0 LANGUAGES C)
 
+set_output_directories(DEBUG Debug)
+set_output_directories(RELEASE Release)
+set_output_directories(RELWITHDEBINFO RelWithDebInfo)
+set_output_directories(MINSIZEREL MinSizeRel)
+
 if (POLICY CMP0069)
     cmake_policy(SET CMP0069 NEW)
 endif()
